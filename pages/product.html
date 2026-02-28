@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="icon" href="../favicon_io/favicon.ico">
@@ -11,7 +14,38 @@
     <link rel="stylesheet" href="../CSS/styles.css">
 
 </head>
+
 <body>
-    <h1>Product</h1>
+    <div id="main">
+        <div id="full-navbar">
+            <div id="navbarlink">
+                <a href="./index.html">Home</a>
+                <a href="./product.html">Products</a>
+                <a href="./cart.html">Cart</a>
+                <button id="navbarbtn"><a href="./login.html">Login</a></button>
+            </div>
+
+        </div>
+        <nav>
+            <div id="logo">
+                <img src="../images/logo.png" alt="Logo">
+            </div>
+
+            <div id="link">
+                <a href="./index.html">Home</a>
+                <a href="./product.html">Products</a>
+                <a href="./cart.html">Cart</a>
+            </div>
+
+            <div id="SignUp">
+                <button id="btn"><a href="./login.html">Login</a></button>
+                <i class="ri-search-line"></i>
+                <i id="shoppingcart" class="ri-shopping-bag-fill"></i>
+                <i id="menu" class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </div>
+    <script src="../Javascripts/main.js"></script>
 </body>
+
 </html>

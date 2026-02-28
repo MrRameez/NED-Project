@@ -11,6 +11,19 @@ body {
 }
 
 /* =================== navbar =================== */
+#full-navbar {
+    height: 45vh;
+    width: 100vw;
+    z-index: 1000;
+    transition: 0.4s ease;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: 1s ease;
+    background-color: #dadada;
+
+}
+
 nav {
     width: 100vw;
     height: 13vh;
@@ -20,15 +33,13 @@ nav {
     justify-content: space-between;
     backdrop-filter: blur(10px);
     background: rgba(170, 151, 151, 0.08);
-    border-bottom: 1px solid rgba(160, 27, 27, 0.2);
-    /* background-color: #dadada; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: 0.4s ease;
+    transition: 0.3s ease;
 }
-
 
 /* =================== Logo =================== */
 #logo img {
@@ -53,7 +64,7 @@ nav {
 #link a {
     text-decoration: none;
     color: #000000;
-    font-size: 2.6vh;
+    font-size: 2.9vh;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     position: relative;
@@ -82,7 +93,6 @@ nav {
 }
 
 /* =================== Sign In Button =================== */
-
 
 #SignUp {
     display: flex;
@@ -136,41 +146,76 @@ nav {
     transition: 0.3s ease;
 }
 
-#SignUp #input {
-    padding: 8px 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    color: #ffffff;
-    transition: 0.3s ease;
-    background: transparent;
-}
-
-#input::placeholder {
-    color: #dadada;
-}
 
 
 
 /* =================== home page1 =================== */
-#page1 #container {
-
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.199);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 #page1 {
     background-image: url("../images/heroSectionImage.png");
     min-height: 100vh;
     background-size: cover;
-    /* pura screen cover kare */
     background-position: center;
-    /* center se show ho */
     background-repeat: no-repeat;
-    /* repeat na ho */
+}
+
+
+
+#page1 #container {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.582);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#page1 #container h1 {
+    color: #f5f0f0;
+    font-size: 10vh;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 2px;
+    font-family: anurati;
+}
+
+#page1 #container p {
+    color: #f5f0f0;
+    font-size: 2.5vh;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+#page1 #container button {
+    padding: 1.5vh 1.5vw;
+    border-radius: 25px;
+    color: #000;
+    font-size: 2.5vh;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.267);
+    background-color: rgba(128, 128, 128, 0.452);
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+#page1 #container button a {
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dadada;
+}
+
+#page1 #container button:hover {
+    background-color: rgb(43, 42, 42);
+    color: #d6d4d4;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#page1 #container button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #page2 #container {
@@ -214,9 +259,7 @@ nav {
         display: none;
     }
 
-    #SignUp #input {
-        display: none;
-    }
+
 
     #input::placeholder {
         color: #dadada;
@@ -226,6 +269,8 @@ nav {
         display: block;
         color: #dadada;
         font-size: 4vh;
+        cursor: pointer;
+        transition: 0.60s ease;
     }
 
     #SignUp #shoppingcart {
@@ -233,6 +278,108 @@ nav {
         color: #dadada;
         font-size: 4vh;
     }
+
+    #full-navbar #navbarlink {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 10vh;
+        left: 10vw;
+
+    }
+
+
+
+    #full-navbar #navbarbtn {
+        padding: 1.3vh .50vw;
+        border-radius: 5px;
+        color: #000;
+        font-size: 1.75vh;
+        font-weight: 600;
+        border: 2px solid rgba(255, 255, 255, 0.267);
+        background-color: rgba(128, 128, 128, 0.452);
+        cursor: pointer;
+        transition: all 0.35s ease;
+    }
+
+    #full-navbar a {
+
+        text-decoration: none;
+        color: #000000;
+        font-size: 2.9vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    #navbarlink a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: #789696;
+        left: 0;
+        bottom: -6px;
+        transition: 0.3s;
+    }
+
+    #navbarlink a:hover::after {
+        width: 100%;
+    }
+
+    #navbarlink a:hover {
+        color: #789696;
+    }
+    
+    #page1 {
+        text-align: left;
+    }
+
+    #overlay {
+        max-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.582);
+    }
+
+    #page1 #overlay #container {
+        min-height: none;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 5vw;
+    }
+    #page1 #overlay #container h1 {
+        color: #f5f0f0;
+        width: 100vw;
+        font-size: 8vh;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 2px;
+        font-family: anurati;
+        flex-wrap: nowrap;
+    }
+    #page1 #overlay #container p {
+        color: #f5f0f0;
+        font-size: 2.5vh;
+        width: 90vw;
+        margin-bottom: 20px;
+    }
+    
+#page1 #container button {
+    padding: 1.5vh 4.5vw;
+    border-radius: 8px;
+    color: #000;
+    font-size: 2.5vh;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.267);
+    background-color: rgba(128, 128, 128, 0.452);
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
 }
 
 
@@ -284,4 +431,158 @@ nav {
         color: #dadada;
         font-size: 2vh;
     }
+
+    #full-navbar #navbarlink {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 10vh;
+        left: 10vw;
+
+    }
+
+
+    #full-navbar #navbarbtn {
+        padding: 1vh .50vw;
+        border-radius: 5px;
+        color: #000;
+        font-size: 1.75vh;
+        font-weight: 600;
+        border: 2px solid rgba(255, 255, 255, 0.267);
+        background-color: rgba(128, 128, 128, 0.452);
+        cursor: pointer;
+        transition: all 0.35s ease;
+        border: 2px solid gray;
+    }
+
+    #full-navbar a {
+
+        text-decoration: none;
+        color: #000000;
+        font-size: 1.9vh;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    #navbarlink a::after {
+        content: "";
+        position: absolute;
+        width: -7%;
+        height: 2px;
+        background: #2f3636;
+        left: 0;
+        bottom: -6px;
+        transition: 0.3s;
+    }
+
+    #navbarlink a:hover::after {
+        width: 100%;
+    }
+
+    #navbarlink a:hover {
+        color: #2f3636;
+    }
+    #page1 {
+        text-align: left;
+    }
+
+    #overlay {
+        max-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.582);
+    }
+
+    #page1 #overlay #container {
+        min-height: none;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 5vw;
+    }
+    #page1 #overlay #container h1 {
+        width: 200px;
+        color: #f5f0f0;
+        font-size: 6vh;
+        /* margin-left: -14.9%; */
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 2px;
+        font-family: anurati;
+    }
+    #page1 #overlay #container p {
+        color: #f5f0f0;
+        font-size: 2.5vh;
+        width: 400px;
+        /* margin-left: 20.9%; */
+        margin-bottom: 20px;
+    }
+    
+#page1 #container button {
+    padding: 1.5vh 4.5vw;
+    border-radius: 8px;
+    color: #000;
+    font-size: 2.5vh;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.267);
+    background-color: rgba(128, 128, 128, 0.452);
+    cursor: pointer;
+    transition: all 0.35s ease;
+    /* margin-left: -30.9%; */
 }
+}
+
+
+
+
+/* =========================
+   MOBILE NAVBAR SETTINGS
+   ========================= */
+
+/* Desktop pe full-navbar bilkul hide */
+@media (min-width: 769px) {
+    #full-navbar {
+        display: none !important;
+    }
+}
+
+/* Mobile ke liye */
+@media (max-width: 768px) {
+
+    nav #link {
+        display: none;
+    }
+
+    #full-navbar {
+        display: block;
+    }
+
+    /* Menu icon show */
+    #menu {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

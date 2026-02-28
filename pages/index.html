@@ -18,6 +18,15 @@
 
 <body>
     <div id="main">
+        <div id="full-navbar">
+            <div id="navbarlink">
+                <a href="./index.html">Home</a>
+                <a href="./product.html">Products</a>
+                <a href="./cart.html">Cart</a>
+                <button id="navbarbtn"><a href="./login.html">Login</a></button>
+            </div>
+
+        </div>
         <nav>
             <div id="logo">
                 <img src="../images/logo.png" alt="Logo">
@@ -28,27 +37,28 @@
                 <a href="./product.html">Products</a>
                 <a href="./cart.html">Cart</a>
             </div>
-
             <div id="SignUp">
-                <input type="text" id="input" placeholder="search product">
                 <button id="btn"><a href="./login.html">Login</a></button>
                 <i class="ri-search-line"></i>
                 <i id="shoppingcart" class="ri-shopping-bag-fill"></i>
-                <i class="ri-menu-line"></i>
+                <i id="menu" class="ri-menu-line"></i>
             </div>
         </nav>
 
         <div id="page1">
-            <div id="container">
-                <h1>Welcome to Our Store</h1>
-                <p>Discover the best products at unbeatable prices. Shop now and experience the difference!</p>
-                <a href="./product.html">Shop Now</a>
+           <div id="overlay">
+             <div id="container">
+                <h1>Get Our Perfume</h1>
+                <p>Discover a world of refined fragrances where every note is carefully crafted to express confidence,
+                    elegance, and timeless sophistication that stays with you wherever you go</p>
+                <button><a href="./product.html">Shop Now</a></button>
             </div>
+           </div>
         </div>
 
         <div id="page2">
             <div id="container">
-                <h1>Welcome to Our Store</h1>
+                <h1>Get Our Perfume</h1>
                 <p>Discover the best products at unbeatable prices. Shop now and experience the difference!</p>
                 <a href="./product.html">Shop Now</a>
             </div>
@@ -59,4 +69,5 @@
     <script src="../Javascripts/main.js"></script>
 
 </body>
+
 </html>
