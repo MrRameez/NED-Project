@@ -33,8 +33,8 @@ window.addEventListener("scroll", function () {
 
 let flag = true
 
-menu.addEventListener("click", function(){
-    e.preventDefault()
+menu.addEventListener("click", function(e){
+    e.preventDefault();
     if (flag) {
         menu.style.color = "#000000";
         icon.forEach(function (i) {
@@ -140,7 +140,7 @@ menu.addEventListener("click", function(){
         products.forEach(function(details) {
 
 
-            console.log("product details", details);
+            // console.log("product details", details);
             
             butter += `<div class="card">
                 <img src="${details.image}" alt="${details.Title}">
