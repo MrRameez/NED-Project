@@ -11,43 +11,56 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="icon" href="../favicon_io/favicon.ico">
     <link rel="manifest" href="../favicon/site.webmanifest">
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- <link rel="stylesheet" href="../CSS/styles.css"> -->
+    <link rel="stylesheet" href="../CSS/product.css">
 
 </head>
 
 <body>
     <div id="main">
-        <div id="header">
+        <!-- <div id="header">
             <div id="full-navbar">
-            <div id="navbarlink">
-                <a href="./index.html">Home</a>
-                <a href="./product.html">Products</a>
-                <a href="./cart.html">Cart</a>
-                <button id="navbarbtn"><a href="./login.html">Login</a></button>
-            </div>
+                <div id="navbarlink">
+                    <a href="./index.html">Home</a>
+                    <a href="./product.html">Products</a>
+                    <a href="./cart.html">Cart</a>
+                    <button id="navbarbtn"><a href="./login.html">Login</a></button>
+                </div>
 
-        </div>
-        <nav>
-            <div id="logo">
-                <img src="../images/logo.png" alt="Logo">
             </div>
+            <nav>
+                <div id="logo">
+                    <img src="../images/logo.png" alt="Logo">
+                </div>
 
-            <div id="link">
-                <a href="./index.html">Home</a>
-                <a href="./product.html">Products</a>
-                <a href="./cart.html">Cart</a>
-            </div>
+                <div id="link">
+                    <a href="./index.html">Home</a>
+                    <a href="./product.html">Products</a>
+                    <a href="./cart.html">Cart</a>
+                </div>
 
-            <div id="SignUp">
-                <button id="btn"><a href="./login.html">Login</a></button>
-                <i class="ri-search-line"></i>
-                <i id="shoppingcart" class="ri-shopping-bag-fill"></i>
-                <i id="menu" class="ri-menu-line"></i>
-            </div>
-        </nav>
-        </div>
+                <div id="SignUp">
+                    <button id="btn"><a href="./login.html">Login</a></button>
+                    <i class="ri-search-line"></i>
+                    <i id="shoppingcart" class="ri-shopping-bag-fill"></i>
+                    <i id="menu" class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </div> -->
+
+
+
+        <input type="text" id="productName" placeholder="Enter product name">
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <button onclick="filterProducts()">Filter</button>
+
+        <div id="productContainer"></div>
     </div>
-    <script src="../Javascripts/main.js"></script>
+    <script src="../Javascripts/product.js"></script>
 </body>
 
 </html>

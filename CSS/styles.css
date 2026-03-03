@@ -160,27 +160,29 @@ nav {
     background-color: #dadada;
     position: fixed;
     top: 0%;
-    right: 0%;
+    right: -100%;
     overflow-y: auto;
+    transition: 2s ease;
 }
 
-#addToCart #container{
+#addToCart #container {
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-shrink: 0;
     gap: 20px;
     position: relative;
     top: 15%;
     bottom: 0%;
+    z-index: 999;
 }
 
 
 
 
-#addToCart #cartnav{
+/* #addToCart #cartnav {
     width: 50vw;
     padding: 22px 20px;
     background-color: #868383;
@@ -191,13 +193,15 @@ nav {
     position: fixed;
     right: 0%;
     z-index: 1000;
-}
-#addToCart #cartnav i{
+} */
+
+#addToCart #cartnav i {
     font-size: 25px;
     font-weight: 600;
     cursor: pointer;
 }
-#addToCart #buttom{
+
+#addToCart #buttom {
     width: 50vw;
     padding: 10px 20px;
     border-top: 2px solid rgb(80, 80, 80);
@@ -206,19 +210,19 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    position: fixed;
-    right: 0%;
+    position: relative;
     bottom: 0%;
-    z-index: 1000;
 }
-#addToCart #buttom h1{
+
+#addToCart #buttom h1 {
     width: 25vw;
     height: 11vh;
     border-right: 2px solid black;
     display: flex;
     align-items: center;
 }
-#addToCart #buttom h2{
+
+#addToCart #buttom h2 {
     width: 30vh;
     text-align: left;
 }
@@ -226,7 +230,7 @@ nav {
 #addToCart #buttom h1 button {
     background-color: rgb(180, 171, 171);
     font-size: 6vh;
-    
+
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     border: none;
@@ -245,15 +249,15 @@ nav {
     background-color: rgb(15, 15, 15);
     color: white;
     transform: translateY(-10px);
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-#addToCart::-webkit-scrollbar{
+#addToCart::-webkit-scrollbar {
     display: none;
 }
 
-#addToCart #cartnav h1{
-    
+#addToCart #cartnav h1 {
+
     /* width: 70%; */
     display: flex;
     border-bottom: 2px solid black;
@@ -266,7 +270,7 @@ nav {
     opacity: 0.7;
 }
 
-#addToCart #showProduct{
+#addToCart #showProduct {
     width: 100%;
     padding: 0 20px;
     height: 20vh;
@@ -277,14 +281,14 @@ nav {
     border: 2px solid rgb(153, 152, 152);
 }
 
-#productNameInfo{
+#productNameInfo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-#Imagebox{
+#Imagebox {
     width: 100%;
     height: 6rem;
     background-color: #4b5563;
@@ -294,7 +298,7 @@ nav {
     border-radius: 30px;
 }
 
-#Imagebox img{
+#Imagebox img {
     width: 100%;
     height: 6rem;
     object-fit: cover;
@@ -302,14 +306,15 @@ nav {
     transition: transform 0.5s ease;
 }
 
-#productinfo{
+#productinfo {
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 3px;
 }
-#productinfo h3{
+
+#productinfo h3 {
     width: 65%;
     border-bottom: 2px solid rgb(73, 73, 73);
     font-family: anurati;
@@ -317,18 +322,19 @@ nav {
     letter-spacing: 5px;
 }
 
-#productinfo h4{
+#productinfo h4 {
     opacity: 0.6;
     font-family: Arial, Helvetica, sans-serif;
 }
-#productinfo h5{
+
+#productinfo h5 {
     opacity: 0.6;
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
 
-#productDeleteIcon i{
+#productDeleteIcon i {
     border-radius: 4px;
     cursor: pointer;
     font-size: 28px;
@@ -426,8 +432,12 @@ nav {
     background-color: #dadada;
 }
 
+
 #products #container #heading {
     text-align: center;
+    font-family: anurati;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .product-grid {
@@ -436,7 +446,6 @@ nav {
     gap: 1.5rem;
     padding: 2rem;
     background-color: #dadada;
-    position: relative;
     overflow-x: auto;
 
 }
@@ -446,6 +455,7 @@ nav {
 }
 
 .card {
+    
     flex-shrink: 0;
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -455,7 +465,7 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .card:hover {
@@ -554,7 +564,7 @@ nav {
 
 /* =================== Ipad =================== */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     /* ============= Header Section ============ */
     nav {
@@ -600,6 +610,19 @@ nav {
         color: #dadada;
         font-size: 4vh;
     }
+
+
+    /* #full-navbar {
+        height: 45vh;
+        width: 100vw;
+        z-index: 1000;
+        transition: 0.4s ease;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        transition: 1s ease;
+        background-color: #dadada;
+    } */
 
     #full-navbar #navbarlink {
         display: flex;
@@ -889,7 +912,7 @@ nav {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         display: flex;
         flex-direction: column;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
 
     .card img {
@@ -917,7 +940,7 @@ nav {
    ========================= */
 
 /* Desktop pe full-navbar bilkul hide */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     #full-navbar {
         display: none !important;
     }
