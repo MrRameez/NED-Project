@@ -107,6 +107,7 @@ nav {
     display: block;
     color: #dadada;
     font-size: 4vh;
+    cursor: pointer;
 }
 
 #btn {
@@ -167,10 +168,11 @@ nav {
 
 #addToCart #container {
     padding: 10px 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-shrink: 0;
     gap: 20px;
     position: relative;

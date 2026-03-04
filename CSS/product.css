@@ -1,17 +1,37 @@
 /* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: #0f0f0f;
+    background: #4d4c4c;
     font-family: 'Segoe UI', sans-serif;
     color: #fff;
-    padding: 40px;
+    overflow-x: hidden;
 }
 
 /* ================= FILTER SECTION ================= */
+
+#filterCarts {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    /* margin-top: 40px; */
+}
+
+/* ================= INPUTS & BUTTONS ================= */
+
 input,
 select,
 button {
     padding: 12px 15px;
-    margin: 10px;
     border-radius: 8px;
     border: none;
     font-size: 14px;
@@ -20,21 +40,24 @@ button {
 input,
 select {
     background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #dadada;
+    border: 1px solid rgba(121, 120, 119, 0.3);
     outline: none;
     transition: 0.3s ease;
 }
 
-input:focus,
-select:focus {
-    border-color: gold;
-    box-shadow: 0 0 8px gold;
+option {
+    color: #000;
 }
 
-/* ================= BUTTON ================= */
+input:focus,
+select:focus {
+    border-color: rgb(139, 139, 138);
+    box-shadow: 0 0 8px rgb(117, 117, 117);
+}
+
 button {
-    background: linear-gradient(45deg, gold, #b8860b);
+    background-color: #dadada;
     color: #000;
     font-weight: 600;
     cursor: pointer;
@@ -43,72 +66,207 @@ button {
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(126, 126, 125, 0.4);
 }
 
-/* ================= PRODUCT CONTAINER ================= */
+/* ================= PRODUCT SECTION ================= */
+
+#buyproduct {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #dadada;
+}
+
 #productContainer {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    margin-top: 40px;
 }
 
-/* ================= CARD ================= */
+/* ================= PRODUCT CARD ================= */
+
 .card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    transition: 0.4s ease;
+    background: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(255, 215, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* ================= IMAGE ================= */
 .card img {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: contain;
-    margin-bottom: 15px;
+    background: #f3f3f3;
+    padding: 15px;
+    transition: 0.4s ease;
 }
 
-/* ================= TEXT ================= */
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 15px;
+}
+
 .card h2 {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.card h1 {
     font-size: 18px;
+    color: #000;
     margin-bottom: 8px;
-    color: gold;
 }
 
 .card p {
-    font-size: 13px;
-    opacity: 0.8;
+    font-size: 14px;
+    color: #444;
     margin-bottom: 8px;
 }
 
 .card h3 {
     font-size: 16px;
-    color: #fff;
+    color: #ff8c00;
+    margin-top: 10px;
 }
+
 /* ================= ADD TO CART BUTTON ================= */
+
 .add-to-cart {
     margin-top: 12px;
-    padding: 10px 20px;
+    padding: 10px;
+    width: 100%;
     border-radius: 8px;
     border: none;
     font-weight: 600;
     cursor: pointer;
     color: #fff;
-    background: linear-gradient(45deg, #ffb700, #ff8c00);
+    background: linear-gradient(45deg, gray, #7c7975);
     transition: 0.3s ease;
 }
 
 .add-to-cart:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(255, 140, 0, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(39, 37, 36, 0.4);
+}
+
+.learn-more{
+    color: #000;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.6;
+    padding: 6px 0;
+    /* letter-spacing: 2px; */
+}
+/* ================= CART PANEL ================= */
+
+#addToCart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100vh;
+    background: #1c1c1c;
+    padding: 20px;
+    overflow-y: auto;
+    transition: 0.4s ease;
+    z-index: 999;
+}
+
+/* ================= CART ITEMS ================= */
+
+#showProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#productNameInfo {
+    display: flex;
+    align-items: center;
+}
+
+#Imagebox img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+#productinfo {
+    margin-left: 10px;
+}
+
+#productinfo h3 {
+    font-size: 15px;
+    color: rgb(12, 12, 12);
+}
+
+#productinfo h4,
+#productinfo h5 {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+#productDeleteIcon i {
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(255, 0, 0, 0.452);
+    transition: 0.3s ease;
+}
+
+#productDeleteIcon i:hover {
+    transform: scale(1.2);
+}
+
+/* ================= CART TOTAL ================= */
+
+#buttom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#buttom h2 {
+    margin-top: 15px;
+    color: rgb(253, 253, 251);
+}
+
+#buttom button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(45deg,gray,#c7c7c6);
+    color: #000;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    #productContainer {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #addToCart {
+        width: 100%;
+    }
 }
