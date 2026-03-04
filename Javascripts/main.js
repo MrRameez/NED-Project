@@ -53,18 +53,201 @@ if (menu && screen) {
 
 // =================== Products ===================
 let products = [
-    { id: 1,
-      image: "../images/janan.png",
-      Title: "Janan",
-      price: 19.00,
-      desc: "Janan – Where Elegance Meets Essence.",
-      category: "Perfume", 
-      gender: "Male", 
-      createdAt: new Date() 
+    {
+        id: 1,
+        image: "../images/Janan.jpg",
+        Title: "Janan",
+        price: 19.00,
+        desc: "Janan – Where Elegance Meets Essence.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
     },
-    { id: 2, image: "../images/janan.png", Title: "Mystic Noir", price: 25.00, desc: "A mysterious scent for evening elegance.", category: "Perfume", gender: "Female", createdAt: new Date() },
-    { id: 3, image: "../images/janan.png", Title: "Royal Oud", price: 40.00, desc: "Luxury oud fragrance.", category: "Perfume", gender: "Male", createdAt: new Date() }
+    {
+        id: 2,
+        image: "../images/Mystic Noir.jpg",
+        Title: "Mystic Noir",
+        price: 25.00,
+        desc: "A mysterious scent for evening elegance.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 3,
+        image: "../images/Royal Oud.jpg",
+        Title: "Royal Oud",
+        price: 40.00,
+        desc: "Luxury oud fragrance for bold personalities.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 4,
+        image: "../images/Velvet Rose.jpg",
+        Title: "Velvet Rose",
+        price: 30.00,
+        desc: "Soft floral fragrance with rose essence.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 5,
+        image: "../images/Ocean Breeze.jpg",
+        Title: "Ocean Breeze",
+        price: 22.00,
+        desc: "Fresh aquatic fragrance for daily wear.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 6,
+        image: "../images/Golden Amber.jpg",
+        Title: "Golden Amber",
+        price: 35.00,
+        desc: "Warm amber scent with rich tones.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 7,
+        image: "../images/Midnight Musk.jpg",
+        Title: "Midnight Musk",
+        price: 28.00,
+        desc: "Deep musk fragrance for night events.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 8,
+        image: "../images/Floral bliss.jpg",
+        Title: "Floral Bliss",
+        price: 24.00,
+        desc: "Refreshing floral bouquet scent.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 9,
+        image: "../images/Desert Oud.jpg",
+        Title: "Desert Oud",
+        price: 45.00,
+        desc: "Strong oud fragrance with woody base.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 10,
+        image: "../images/Pink Bloom.jpg",
+        Title: "Pink Bloom",
+        price: 27.00,
+        desc: "Light and sweet fragrance for daytime.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 11,
+        image: "../images/Silver Storm.jpg",
+        Title: "Silver Storm",
+        price: 33.00,
+        desc: "Energetic scent with citrus burst.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 12,
+        image: "../images/Lavender Dream.jpg",
+        Title: "Lavender Dream",
+        price: 26.00,
+        desc: "Calming lavender-based perfume.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 13,
+        image: "../images/Black Intense.jpg",
+        Title: "Black Intense",
+        price: 50.00,
+        desc: "Strong masculine intense fragrance.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 14,
+        image: "../images/pearl Essence.jpg",
+        Title: "Pearl Essence",
+        price: 29.00,
+        desc: "Elegant fragrance with soft sweetness.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 15,
+        image: "../images/Urban Legend.jpg",
+        Title: "Urban Legend",
+        price: 31.00,
+        desc: "Modern city-inspired fragrance.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 16,
+        image: "../images/Sweet Vanilla.jpg",
+        Title: "Sweet Vanilla",
+        price: 23.00,
+        desc: "Vanilla-infused romantic scent.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 17,
+        image: "../images/Dark Knight.jpg",
+        Title: "Dark Knight",
+        price: 38.00,
+        desc: "Bold and powerful evening fragrance.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    },
+    {
+        id: 18,
+        image: "../images/Cherry Blossom.jpg",
+        Title: "Cherry Blossom",
+        price: 32.00,
+        desc: "Fresh floral fragrance inspired by spring.",
+        category: "Perfume",
+        gender: "Female",
+        createdAt: new Date()
+    },
+    {
+        id: 19,
+        image: "../images/Classic Wood.jpg",
+        Title: "Classic Wood",
+        price: 34.00,
+        desc: "Timeless woody fragrance.",
+        category: "Perfume",
+        gender: "Male",
+        createdAt: new Date()
+    }
 ];
+
+
+
+
 
 // Only render if container exists
 if (container) {
@@ -114,17 +297,17 @@ if (shoppincarts && showAddToCarts) {
 // ==========================
 function renderProducts(data = products) {
 
-  if (!productContainer) return;
+    if (!productContainer) return;
 
-  productContainer.innerHTML = "";
+    productContainer.innerHTML = "";
 
-  if (data.length === 0) {
-    productContainer.innerHTML = "<h2>No Products Found</h2>";
-    return;
-  }
+    if (data.length === 0) {
+        productContainer.innerHTML = "<h2>No Products Found</h2>";
+        return;
+    }
 
-  data.forEach(product => {
-    productContainer.innerHTML += `
+    data.forEach(product => {
+        productContainer.innerHTML += `
       <div class="card">
         <img src="${product.image}" alt="${product.Title}">
         <div class="card-content">
@@ -139,7 +322,7 @@ function renderProducts(data = products) {
         </div>
       </div>
     `;
-  });
+    });
 }
 
 renderProducts();
@@ -150,18 +333,18 @@ renderProducts();
 
 function filterProducts() {
 
-  let nameInput = document.getElementById("productName")?.value.toLowerCase() || "";
-  let genderInput = document.getElementById("gender")?.value || "";
+    let nameInput = document.getElementById("productName")?.value.toLowerCase() || "";
+    let genderInput = document.getElementById("gender")?.value || "";
 
-  let filtered = products.filter(product => {
+    let filtered = products.filter(product => {
 
-    let matchName = product.Title.toLowerCase().includes(nameInput);
-    let matchGender = genderInput === "" || product.gender === genderInput;
+        let matchName = product.Title.toLowerCase().includes(nameInput);
+        let matchGender = genderInput === "" || product.gender === genderInput;
 
-    return matchName && matchGender;
-  });
+        return matchName && matchGender;
+    });
 
-  renderProducts(filtered);
+    renderProducts(filtered);
 }
 
 
@@ -173,39 +356,39 @@ let cart = [];
 
 function addToCart(id) {
 
-  let product = products.find(p => p.id === id);
-  if (!product) return;
+    let product = products.find(p => p.id === id);
+    if (!product) return;
 
-  let existing = cart.find(item => item.id === id);
+    let existing = cart.find(item => item.id === id);
 
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({ ...product, quantity: 1 });
-  }
-  
-  updateCartUI();
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+
+    updateCartUI();
 }
 console.log();
 
 function updateCartUI() {
 
-  if (!cartContainer) return;
+    if (!cartContainer) return;
 
-  cartContainer.innerHTML = "";
+    cartContainer.innerHTML = "";
 
-  let total = 0;
+    let total = 0;
 
-  if (cart.length === 0) {
-    cartContainer.innerHTML = "<h2 style='text-align:center'>Cart is Empty</h2>";
-    return;
-  }
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<h2 style='text-align:center'>Cart is Empty</h2>";
+        return;
+    }
 
-  cart.forEach(product => {
+    cart.forEach(product => {
 
-    total += product.price * product.quantity;
+        total += product.price * product.quantity;
 
-    cartContainer.innerHTML += `
+        cartContainer.innerHTML += `
        <div id="showProduct">
                     <div id="productNameInfo">
                         <div id="Imagebox">
@@ -222,11 +405,11 @@ function updateCartUI() {
                     </div>
                 </div>
     `;
-  });
+    });
 
-  cartContainer.innerHTML += `
+    cartContainer.innerHTML += `
     <div id="buttom">
-                    <h1><button>Buy Now</button></h1>
+                    <h1><button><a href="./detail.html">Order Now</a></button></h1>
                     <h2>Total: <span>$${total.toFixed(2)}</span></h2>
                 </div>
   `;
@@ -235,7 +418,9 @@ function updateCartUI() {
 
 function removeFromCart(id) {
 
-  cart = cart.filter(item => item.id !== id);
-  updateCartUI();
+    cart = cart.filter(item => item.id !== id);
+    updateCartUI();
 }
+
+
 

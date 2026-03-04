@@ -40,7 +40,7 @@ button {
 input,
 select {
     background: rgba(255, 255, 255, 0.05);
-    color: #dadada;
+    color: #fcfbfb;
     border: 1px solid rgba(121, 120, 119, 0.3);
     outline: none;
     transition: 0.3s ease;

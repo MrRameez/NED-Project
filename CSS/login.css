@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539') no-repeat center center/cover;
+    position:relative;
+}
+
+/* Dark overlay */
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+}
+
+/* Main Card */
+.wrapper{
+    position:relative;
+    width:400px;
+    padding:40px 35px;
+    border-radius:20px;
+    backdrop-filter: blur(15px);
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+    color:#fff;
+    z-index:2;
+}
+
+.logo{
+    text-align:center;
+    font-size:28px;
+    font-weight:600;
+    /* letter-spacing:px; */
+    color:#000000af; /* gold */
+    margin-bottom:5px;
+}
+
+.title{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:25px;
+    color:#fff;
+}
+
+/* Fields */
+.field{
+    position:relative;
+    margin-top:20px;
+}
+
+.field input{
+    width:100%;
+    height:50px;
+    padding:0 15px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.3);
+    background:transparent;
+    color:#fff;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+.field input:focus{
+    border-color:#ffffff;
+    box-shadow:0 0 10px rgba(253, 253, 253, 0.5);
+}
+
+/* Floating label */
+.field label{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#ccc;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label{
+    top:-8px;
+    left:18px;
+    font-size:12px;
+    background:#080808;
+    padding:0 6px;
+    color:#dadada;
+}
+
+
+/* Button */
+.field input[type="submit"]{
+    margin-top:15px;
+    background:linear-gradient(45deg,#000000,#5a5851);
+    border:none;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.field input[type="submit"]:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 20px rgba(250, 248, 248, 0.4);
+}
+
+/* Signup */
+.signup-link{
+    text-align:center;
+    margin-top:20px;
+    font-size:14px;
+}
+
+.signup-link a{
+    color:#000000;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.signup-link a:hover{
+    text-decoration:underline;
+}
+
+
+
+
+
+
+
+/* Register specific spacing fix */
+.wrapper form{
+    max-height: 550px;
+}
+
+/* Smooth appearance animation */
+.wrapper{
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* Better button text spacing */
+.field input[type="submit"]{
+    letter-spacing:1px;
+}

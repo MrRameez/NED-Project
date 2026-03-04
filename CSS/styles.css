@@ -245,7 +245,10 @@ nav {
     position: relative;
     overflow: hidden;
 }
-
+#addToCart #buttom h1 button a{
+    text-decoration: none;
+    color: #000000;
+}
 /* Hover Effect */
 #addToCart #buttom h1 button:hover {
     background-color: rgb(15, 15, 15);
@@ -443,6 +446,7 @@ nav {
 }
 
 .product-grid {
+    width: 100vw;
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
