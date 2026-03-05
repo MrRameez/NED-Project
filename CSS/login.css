@@ -138,28 +138,3 @@ body{
 
 
 
-/* Register specific spacing fix */
-.wrapper form{
-    max-height: 550px;
-}
-
-/* Smooth appearance animation */
-.wrapper{
-    animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform: translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform: translateY(0);
-    }
-}
-
-/* Better button text spacing */
-.field input[type="submit"]{
-    letter-spacing:1px;
-}
